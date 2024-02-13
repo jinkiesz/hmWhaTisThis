@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Valentine</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body>
+    <div id="content">
+        <div class="valentine-message">
+            Erlendur, will you be my Valentine?
+        </div>
+        <div class="response-buttons">
+            <button type="button" id="yes-button">Yes</button>
+            <button type="button" id="no-button">No</button>
+        </div>
+        <div style="text-align:center;">
+            <img src="c66a6dd9b4a2c16b9dbb3a661f5aed13.gif" alt="Pandas in a cup" class="valentine-image">
+        </div>
+    </div>
+    
+    <script src="/socket.io/socket.io.js"></script>
+    <script>
+        document.getElementById('no-button').addEventListener('click', function() {
+            document.getElementById('content').style.display = 'none';
+    
+        var newMessage = document.createElement('div');
+        newMessage.innerHTML = '<p>Okay... click the link:</p><a href="virus.pdf" download>Download</a>';
+        newMessage.style.textAlign = 'center';
+        newMessage.style.marginTop = '20vh';
+        
+        document.body.appendChild(newMessage);
+        });
+
+        document.getElementById('yes-button').addEventListener('click', function() {
+            // Hide the current content
+            document.getElementById('content').style.display = 'none';
+
+            // Create the yay message and center it
+            var yayMessage = document.createElement('div');
+            yayMessage.innerHTML = '<p>Yayyy, I love you baby</p><p>best valentine in the world</p>';
+            yayMessage.style.textAlign = 'center';
+            yayMessage.style.marginTop = '20vh'; // Centers the message vertically
+
+            // Append the yay message to the body
+            document.body.appendChild(yayMessage);
+
+            // Create and append the GIF image
+            var loveGif = document.createElement('img');
+            loveGif.src = 'instagram-zefexwoo-shaurya.gif'; // Make sure the path to your gif is correct
+            loveGif.alt = 'Love animation';
+            loveGif.style.height = '100px'; // Adjust size as needed
+            loveGif.style.display = 'inline-block'; // Display inline with the text
+            loveGif.style.verticalAlign = 'middle'; // Align with the text vertically
+
+            yayMessage.appendChild(loveGif); // Append the GIF to the yay message div
+
+            var videoElement = document.createElement('video');
+            videoElement.setAttribute('width', '560');
+            videoElement.setAttribute('height', '315');
+            videoElement.setAttribute('src', 'Rick Astley - Never Gonna Give You Up (Official Music Video).mp4#t=42');
+            videoElement.setAttribute('controls', '');
+            videoElement.setAttribute('autoplay', '');
+            videoElement.style.position = 'absolute'; // Position it absolutely within a relatively positioned parent or body
+            videoElement.style.right = '450px'; // Move it to the right edge of the nearest positioned ancestor or body
+            videoElement.volume = 1.0; // Set the volume to 100%
+            document.body.appendChild(videoElement);
+
+            videoElement.play(); // Attempt to play the video
+        });
+    </script>
+</body>
+</html>

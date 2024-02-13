@@ -1,0 +1,46 @@
+.valentine-message {
+    font-weight: bold;
+    position: absolute;
+    top: 15%;
+    left: 50%;
+    font-size: 24px;
+    transform: translate(-50%, -50%);
+    text-align: center;
+}
+
+.response-buttons {
+    text-align: center;
+    position: absolute;
+    top: 55%; /* Adjust if necessary to place buttons below the message */
+    left: 50%;
+    padding-bottom: 30px;
+    padding-right: 10px;
+    transform: translate(-50%, -50%);
+}
+
+.response-buttons button {
+    font-size: 20px; /* Increases the text size within the buttons */
+    padding: 8px 20px; /* Increases the button size */
+    font-weight: bold; /* Makes the text within the buttons bolder */
+    margin: 0 10px; /* Keeps space between the buttons */
+}
+
+#yes-button {
+    background-color: green; /* Makes the background color green */
+    color: white; /* Changes the text color to white for better visibility */
+    /* Add other properties as needed */
+}
+
+#no-button {
+    background-color: red; /* Makes the background color red */
+    color: white; /* Changes the text color to white for better visibility */
+    /* Add other properties as needed */
+}
+.valentine-image {
+    display: block;
+    margin: auto;
+    padding-top: 120px;
+    padding-right: 20px;
+    max-width: 200px; /* Adjust the size to your preference */
+    height: auto;
+}
